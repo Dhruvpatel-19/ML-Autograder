@@ -1,0 +1,2878 @@
+Instruction,Input,Output,Code Style,Score
+Create a function in Python which takes a list of numbers and returns the sum of squares of those numbers.,"[3, 4, 5]","def sum_squares(nums):
+    result = 0
+    for num in nums:
+        result += num * num
+    return result
+
+if __name__ == ""__main__"":
+    nums_list = [3, 4, 5]
+    result_sum_squares = sum_squares(nums_list)
+    print(result_sum_squares)",8.89,4.44
+Design a function in Python that sorts a list of strings in alphabetical order.,"['red', 'green', 'orange']","def sort_list_alphabetically(input_list):
+    sorted_list = sorted(input_list)
+    return sorted_list
+
+input_list = ['red', 'green', 'orange']
+sorted_list = sort_list_alphabetically(input_list)
+print(""Sorted List in Alphabetical Order:"", sorted_list)",10,5
+create a Python program for shuffeling the elements of an array.,,"def example_function():
+    for i in range(10):
+        print(i)
+
+example_function()",7.5,3.75
+print an array containing the seven days of the week.,"days = [""Monday"", ""Thuesday"", ""Wednesday"", ""Thrusday"", ""Friday""]
+
+for day in days:
+    print(day)","days = [""Monday"", ""Tuesday"", ""Wednesday"", ""Thursday"", ""Friday"", ""Saturday"", ""Sunday""]
+
+for day in days:
+    print(day)",10,5
+Create a calculator program using Python.,,"def calculator(num1, num2, op):
+ if op == '+':
+ return num1 + num2
+ elif op == '-':
+ return num1 - num2
+ elif op == '*':
+ return num1 * num2
+ elif op == '/':
+ return num1 / num2
+ else:
+ return None",8.89,4.44
+Develop a Python script that takes two parameters and prints the greatest out of them.,,"def find_greatest(param1, param2):
+    if param1 > param2:
+        greater = param1
+    else:
+        greater = param2
+    return greater
+",10,5
+Create a Python program that prints the Roman numerals representation for any given number.,,"def Roman(number):
+ roman = {1000: 'M', 900: 'CM', 500: 'D', 400: 'CD',
+100: 'C', 90: 'XC', 50: 'L', 40: 'XL',
+ 10: 'X', 9: 'IX', 5: 'V', 4: 'IV', 1: 'I'}
+ result = ''
+
+ for num in roman.keys():
+ while number >= num:
+ result += roman[num]
+ number -= num
+
+ print (result) 
+
+number = int(input('Enter a number: '))
+Roman(number)",7,3.5
+Create a Python program to check if an integer is divisible by 5,Integer : 10,"def is_divisible_by_5(number):
+    return number % 5 == 0
+
+number = 10
+print(is_divisible_by_5(number))
+",7.5,3.75
+"Write a python program to which given a list of numbers, will calculate the mean value",,"def mean(nums):
+    total = 0
+    for num in nums:
+        total += num
+    return total / len(nums)
+",10,5
+Write a function to calculate the total number of days between two dates in Python.,,"from datetime import datetime
+
+def calculate_days_between(start_date, end_date):
+  start_date = datetime.strptime(start_date, '%Y-%m-%d')
+  end_date = datetime.strptime(end_date, '%Y-%m-%d')
+  delta = end_date - start_date
+  return delta.days",10,5
+Write a Python program to generate a Fibonacci sequence where the number of elements is given as an input.,Number of elements = 10,"def generate_fibonacci(num_of_elements):
+    sequence = []
+    a = 0
+    b = 1
+    for i in range(num_of_elements):
+        sequence.append(a)
+        c = a + b
+        a = b
+        b = c
+    return sequence
+
+print(generate_fibonacci(10))
+",9.09,4.54
+Write a Python program to generate a sorted list of unique numbers from 0 to 9 in random order.,,"import random
+random_numbers = random.sample(range(0, 10), 10)
+ 
+random_numbers.sort()
+
+print(random_numbers)
+",10,5
+Create a Python function to replace all the vowels in a string with 'x'.,,"def replace_vowels(s):
+    vowels = 'aeiou'
+    for char in vowels:
+        s = s.replace(char, 'x')
+    return s
+
+print(replace_vowels(""hello world""))
+",10,5
+Generate Python code to implement a binary search algorithm.,,"def binary_search(arr, target):
+    left = 0
+    right = len(arr) - 1
+    
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] > target:
+            right = mid - 1
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            return mid
+    return -1
+
+print(binary_search([1, 2, 3, 4, 5], 3))
+",9.17,4.5
+Write a Python function to create a stack data structure,,"class Stack():
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+   
+    def pop(self):
+        if len(self.items) == 0: 
+            return None
+        else: 
+            return self.items.pop()
+    
+    def peek(self):
+        if len(self.items) == 0:
+            return None
+        else:
+            return self.items[-1]
+",7.69,3.8
+Please generate a Python script that calculates the mean of a given array of numbers.,"[4, 9, 3, 5]","def calculateMean(array):
+    mean = 0
+    for i in range(len(array)):
+        mean += array[i]
+    mean /= len(array)
+    return mean
+
+array = [4, 9, 3, 5]
+mean = calculateMean(array)
+print(mean)
+",10,5
+Design a Python function to calculate the area of a circle given its radius.,,"import math
+
+def area_of_circle(radius):
+    return math.pi * (radius ** 2)
+
+radius = 5.0
+print(f""Area of circle with radius {radius} is: {area_of_circle(radius)}"")
+",9,4.5
+Write a Python function which takes in an argument and returns a corresponding string.,"Given an argument of 1,2 or 3","def get_string(arg):
+    if arg == 1:
+        return ""One""
+    elif arg == 2:
+        return ""Two""
+    elif arg == 3:
+        return ""Three""
+    else:
+        return None
+
+print(get_string(2)) 
+",8.89,4.44
+Can you form a mathematical expression in Python to calculate the total area of a circle and a square?,,"import math
+
+radius = 4
+side = 5
+
+circle_area = math.pi * radius**2
+square_area = side**2
+
+total_area = circle_area + square_area
+print(""Total area of the circle and square:"", total_area)
+",10,5
+Generate a code snippet to print a pattern of stars in Python.,rows = 5,"rows = 5
+
+for i in range(0, rows):
+    for j in range(0, i + 1):
+        print(""* "", end="""")
+    print()
+",10,5
+Develop an algorithm in Python to find the depth of a binary tree.,,"def findDepth(root): 
+    if root is None: 
+        return 0 
+  
+    else :  
+        left_height = findDepth(root.left) 
+        right_height = findDepth(root.right) 
+  
+        if left_height > right_height: 
+            return left_height+1
+        else: 
+            return right_height+1
+",7.5,3.75
+Write a python function to count the number of rotations required to generate a sorted array.,,"def count_Rotation(arr,n):   
+    for i in range (1,n): 
+        if (arr[i] < arr[i - 1]): 
+            return i  
+    return 0
+",8.89,4.44
+Can you create a program that reads two numbers from the user and outputs the two numbers in descending order?,,"def main():
+    num1 = int(input(""Enter the first number: ""))
+    num2 = int(input(""Enter the second number: ""))
+    
+    maximum = max(num1, num2)
+    minimum = min(num1, num2)
+    
+    print(f""Maximum number: {maximum}"")
+    print(f""Minimum number: {minimum}"")
+
+if __name__ == ""__main__"":
+    main()
+",10,5
+Create an algorithm in Python to find the first index of an item in an array.,"arr = [1,3,7,9,0,4]
+num = 7","def find_index(arr, num):
+    for index in range(len(arr)):
+        if arr[index] == num:
+            return index
+    return -1
+
+arr = [1, 3, 7, 9, 0, 4]
+num = 7
+index = find_index(arr, num)
+print(f'Index of {num} is {index}')
+",6.67,3.33
+Create a Python program to generate a Fibonacci sequence using recursion.,,"def Fibonacci_Sequence(n): 
+    if n<0: 
+        print(""Incorrect input"") 
+    elif n==1: 
+        return 0
+    elif n==2: 
+        return 1
+    else: 
+        return Fibonacci_Sequence(n-1)+Fibonacci_Sequence(n-2) 
+  
+print(Fibonacci_Sequence(10))
+",8.89,4.44
+Generate a function in Python to convert a given integer to its binary representation.,17,"def convertToBinary(n): 
+    if n > 1: 
+        convertToBinary(n//2) 
+  
+    print(n % 2,end = '') 
+
+num = 17
+convertToBinary(num)
+",10,5
+Generate a correct Python program to take two lists as input and combine them into a 3rd list.,"list1 = [1, 2, 3]
+list2 = [4, 5, 6]","def combine_lists(list1, list2):
+    output = list1 + list2
+    return output
+
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+
+combined_list = combine_lists(list1, list2)
+print(combined_list)
+",7.14,3.57
+Write a Python program to remove an item from a list whose index is specified.,"list = ['Apple', 'Orange', 'Banana', 'Mango']","def remove_specified_index(lst, index):
+    new_list = [lst[i] for i in range(len(lst)) if i != index]
+
+    return new_list
+
+lst = ['Apple', 'Orange', 'Banana', 'Mango']
+index = 2
+
+print(remove_specified_index(lst, index))
+",8.89,4.44
+Build a Python script to remove all punctuation from a given string.,"""This is a cool string!""","import string
+
+input_str = ""This is a cool string!""
+punctuation_removed = input_str.translate(str.maketrans('', '', string.punctuation))
+print(punctuation_removed)
+",10,5
+Generate a program in Python that takes a given dictionary and finds the key with the highest value.,"my_dict = {
+    'a': 1,
+    'b': 5,
+    'c': 3
+}","def highest_value(d):
+    key, highest_val = None, -float(""inf"")
+    for k, val in d.items():
+        if val > highest_val:
+            key, highest_val = k, val
+    return key
+
+highest_key = highest_value(my_dict)
+print(highest_key)
+",10,5
+Create a program in Python to split a string into an array based on a given delimiter.,"String: Hello,World
+Delimiter: ,","def split_string(s, delimiter):
+    return s.split(delimiter)
+
+string = 'Hello,World'
+delimiter = ','
+
+result = split_string(string, delimiter)
+print(result)
+",8.33,4.16
+Write a function in Python that takes an array of integers and its size as parameters and returns the maximum value in the array.,"arr = [1, 6, 8, 4, 9, 6, 10]
+n = len(arr)","def find_max(arr, n):
+    max_value = arr[0]
+
+    for i in range(1, n):
+
+        if arr[i] > max_value:
+            max_value = arr[i]
+
+    return max_value
+
+arr = [1, 6, 8, 4, 9, 6, 10]
+n = len(arr)
+print(find_max(arr, n))
+",7.78,3.89
+Generate a function in Python to filter a given list and keep only the numeric items in the list.,"input_list = [4, 2, 1, 15.6, 'p', 'y', 5.8]","def filter_numeric(input_list): 
+    
+    num_list = [] 
+  
+    for item in input_list:
+        if type(item) == int or type(item) == float: 
+            num_list.append(item) 
+   
+    return num_list 
+  
+input_list = [4, 2, 1, 15.6, 'p', 'y', 5.8] 
+print(filter_numeric(input_list)) 
+",8.75,4.43
+Create an algorithm to determine if two strings have the same character set in Python.,"Strings: ""paris"" and ""sapir""","def same_charset(str1, str2):
+    return sorted(str1) == sorted(str2)
+
+str1 = ""paris""
+str2 = ""sapir""
+print(same_charset(str1, str2))
+",10,5
+Create a program in Python to generate 10 random integers.,,"import random
+
+for _ in range(10):
+    print(random.randint(0,100))
+",10,5
+Write a function to calculate the difference between the squared sum of first n natural numbers and the sum of squared first n natural numbers.,,"def sum_difference(n):
+    sumofsquares = 0
+    squareofsum = 0
+    for num in range(1, n+1):
+        sumofsquares += num * num
+        squareofsum += num
+    squareofsum = squareofsum ** 2
+    return squareofsum - sumofsquares
+",10,5
+Write a function in Python that computes the average of all numbers in a given list.,"numbers = [4, 8, 6, 2, 10]","def compute_average(numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total / len(numbers)
+
+numbers = [4, 8, 6, 2, 10]
+average = compute_average(numbers)
+print(average)
+",8.75,4.34
+"Create a Python script to transform a list of strings into a list of integers, each integer representing the length of the corresponding string.","[""Hello"", ""World"", ""Goodbye""]","def string_to_length(list_strings):
+    return [len(string) for string in list_strings]
+
+list_strings = [""Hello"", ""World"", ""Goodbye""]
+lengths = string_to_length(list_strings)
+print(lengths)
+",9,4.5
+Create an algorithm using Python to find the largest number in a list.,"[8, 5, 10, 3]","def find_largest_number(numbers):
+    if not numbers:
+        return None
+
+    largest = numbers[0]
+    for num in numbers:
+        if num > largest:
+            largest = num
+    return largest
+
+numbers = [8, 5, 10, 3]
+largest = find_largest_number(numbers)
+print(largest)
+",9.27,4.63
+Construct a Python class to represent a point in the Cartesian plane.,,"class Point:
+    def __init__ (self, x=0, y=0):
+        self.x = x
+        self.y = y
+ 
+    def __str__ (self):
+        return ""({0},{1})"".format(self.x,self.y)
+ 
+    def distance_from_origin (self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+",10,5
+Write a Python program to take user input and check if it is a palindrome or not.,racecar,"def isPalindrome(inp):
+ inp = inp.lower()
+ return inp == inp[::-1]
+
+user_input = input('Enter string: ')
+if isPalindrome(user_input):
+ print('It\'s a palindrome')
+else:
+ print('It\'s not a palindrome')
+",10,5
+Create a program in Python to sort a given unsorted list.,"[5, 4, 1, 8, 9, 2]","def sort_list(lst):
+    lst.sort()
+    return lst
+
+ar_list = [5, 4, 1, 8, 9, 2]
+result = sort_list(ar_list)
+print(result)
+",10,5
+Write a function in Python that counts the number of words in a given sentence.,,"def word_count(sentence):
+    count = 0
+    for word in sentence.split(' '):
+        count += 1
+    return count
+",10,5
+Create a Python program for a count the number of occurrences of each letter in a given string.,,"def count_occurrences(string):
+    char_count = {}
+    for letter in string:
+        if letter in char_count:
+            char_count[letter] += 1
+        else:
+            char_count[letter] = 1
+    return char_count
+
+my_string = 'Hello World!'
+letter_occurrences = count_occurrences(my_string)
+print(letter_occurrences)
+",10,5
+Compose a Python Code to swap two numbers without using a temporary variable.,,"a = 10
+b = 5
+
+a = a ^ b 
+b = a ^ b 
+a = a ^ b 
+
+print(""a ="", a) 
+print(""b ="", b)
+",9.27,4.63
+Create a Python program to loop through a given list and print each item on a new line.,"my_list = [""apples"", ""oranges"", ""bananas""]","my_list = [""apples"", ""oranges"", ""bananas""]
+for item in my_list:
+    print(item)
+",10,5
+Create a function in Python that implements binary search.,"[2, 5, 7, 9, 12, 15], 12","def binary_search(arr, value):
+    low = 0
+    high = len(arr) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] < value:
+            low = mid + 1
+        elif arr[mid] > value:
+            high = mid - 1
+        else:
+            return mid
+
+    return -1
+
+arr = [2, 5, 7, 9, 12, 15]
+value = 12
+print(binary_search(arr, value))
+",8.57,4.28
+Write a Python program that prints all prime numbers up to a given number n.,,"def prime_numbers(n):
+    for i in range(2, n + 1):
+        prime = True
+        for j in range(2, i):
+            if i % j == 0:
+                prime = False
+                break
+
+        if prime:
+            print(i)
+
+prime_numbers(10)
+",10,5
+Write a Python program to implement Linear Search for an array of numbers,"arr = [2, 3, 5, 7, 11]
+n = 11","def linear_search(arr, n):
+    for i in range(len(arr)):
+        if arr[i] == n:
+            return i
+    return -1
+
+arr = [2, 3, 5, 7, 11]
+n = 11
+index = linear_search(arr, n)
+print(index)
+",10,5
+Create a function in Python to find the longest string in a given list of strings,"[""Apple"", ""Banana"", ""Orange"", ""Mango"", ""Pineapple""]","def find_longest_string(arr):
+    longest_string = ''
+    for s in arr:
+        if len(s) > len(longest_string):
+            longest_string = s
+    return longest_string
+
+# Example usage
+arr = [""Apple"", ""Banana"", ""Orange"", ""Mango"", ""Pineapple""]
+result = find_longest_string(arr)
+print('Longest string is', result)
+",8.89,4.44
+Create a function that computes an array of odd numbers within a given range,an integer n,"def odd_numbers(n): 
+    odd_numbers = [] 
+      
+    # looping through each number 
+    for i in range(1, n + 1): 
+        if i % 2 != 0: 
+            odd_numbers.append(i) 
+    return odd_numbers
+",8.33,4.16
+Create a basic Command Line program in Python that takes two parameters and prints the result of their multiplication.,,"import sys
+
+first, second = int(sys.argv[1]), int(sys.argv[2])
+
+print(f""Result of {first} * {second} is: {first * second}"")
+",10,5
+Implement a search algorithm in Python to look for the value in the list.,"list_tmp = [1, 23, 42, 5, 7, 34, 89]
+value = 42","def search(list_tmp, value):
+    for index, item in enumerate(list_tmp):
+        if item == value:
+            return index
+
+    return -1
+
+list_tmp = [1, 23, 42, 5, 7, 34, 89]
+value = 42
+index = search(list_tmp, value)
+print(index)
+",10,5
+"Design a Python program to read in a list of list of strings, eliminate duplicate entries, sort them and print out the result.","[['b', 'a', 'd'], ['c', 'a', 'd'], ['a', 'f', 'g']]","def remove_duplicates(list_of_lists):
+    result = []
+    for item in list_of_lists:
+        if item not in result:
+            result.append(item)
+    result.sort()
+    return result
+
+list_of_lists = [['b', 'a', 'd'], ['c', 'a', 'd'], ['a', 'f', 'g']]
+print(remove_duplicates(list_of_lists))
+",8.89,4.44
+Write a function to create the next bigger number by rearranging the digits of a given number.,,"def rearrange_bigger(n):
+    nums = list(str(n))
+    for i in range(len(nums)-2,-1,-1):
+        if nums[i] < nums[i+1]:
+            z = nums[i:]
+            y = min(filter(lambda x: x > z[0], z))
+            z.remove(y)
+            z.sort()
+            nums[i:] = [y] + z
+            return int("""".join(nums))
+    return False
+",9.09,4.54
+"Write a Python code that prints ""Hello World"" if the user inputs ""Y"" and ""Goodbye"" if they input ""N"".",,"user_input = input('Input Y or N: ')
+
+if user_input == 'Y':
+    print('Hello World')
+elif user_input == 'N':
+    print('Goodbye')
+",10,5
+Design a Python algorithm to parse a list of strings and prints the longest string's length.,"listOfString= [""I"", ""am"", ""so"", ""happy""]","listStrings= [""I"", ""am"", ""so"", ""happy""]
+longestStringLen = 0
+for string in listStrings:
+    if (len(string) > longestStringLen):
+        longestStringLen = len(string)
+
+print(longestStringLen)",8.33,4.16
+Write a Python program that takes in three numbers as input and determines which number is the maximum.,,"def max_number(a,b,c):
+  max = a
+  if b > max:
+    max = b
+  if c > max:
+    max = c
+  return max
+
+print(max_number(1,5,3))",9.27,4.63
+Write a Python program to create a function that receives a list of strings and returns a new list with the strings sorted according to their length.,"[""Python"", ""is"", ""a"", ""programming"", ""language""]","def sort_list_by_length(list_of_strings):
+    return sorted(list_of_strings, key=len)
+
+list_of_strings = [""Python"", ""is"", ""a"", ""programming"", ""language""]
+sorted_list = sort_list_by_length(list_of_strings)
+
+print(sorted_list)
+",9,4.5
+"def sort_list_by_length(list_of_strings):
+    return sorted(list_of_strings, key=len) 
+
+list_of_strings = [""Python"", ""is"", ""a"", ""programming"", ""language""]
+sorted_list = sort_list_by_length(list_of_strings) 
+
+print(sorted_list)","Array 1: [3, 5, 2, 8, 1], Array 2: [5, 8, 9, 7]","def intersection(array_1, array_2):
+    result = []
+    for num in array_1:
+        if num in array_2:
+            result.append(num)
+    return result
+
+array_1 = [3, 5, 2, 8, 1]
+array_2 = [5, 8, 9, 7]
+print(intersection(array_1, array_2))  # Outputs: [5, 8]
+",7.78,3.89
+Generate a Python function that takes an array of elements and finds the frequency of each element,"[1,4,1,4,4,4,9,7]","def count_frequency(l):
+    frequencies = {}
+    for i in l:
+        if i in frequencies:
+            frequencies[i] += 1
+        else:
+            frequencies[i] = 1
+    return frequencies
+
+l = [1,4,1,4,4,4,9,7]
+print(count_frequency(l))
+",9.29,4.64
+Write a function in Python to get the number of occurrences of a particular character in a given sentence.,"sentence = ""Hello world!""
+character = 'l'","def count_occurrences(sentence, character):
+    return sentence.count(character)
+
+sentence = ""Hello world!""
+character = 'l'
+print(count_occurrences(sentence, character))  # Outputs: 3
+",10,5
+Design a function in Python for filtering out unique elements in a list.,"list = [1, 2, 2, 3, 3, 4]","def filter_list(lst):
+    seen = set()
+    filtered_list = []
+    
+    for item in lst:
+        if item not in seen:
+            seen.add(item)
+            filtered_list.append(item)
+    
+    return filtered_list
+
+my_list = [1, 2, 2, 3, 3, 4]
+filtered_list = filter_list(my_list)
+print(filtered_list)
+",9.09,4.54
+Implement a function to remove all occurrences of the word 'python' from a given sentence.,"sentence = ""I love learning Python but sometimes it is hard to understand""","def remove_word(sentence, word):
+    words = sentence.split()
+    new_words = [w for w in words if w != word]
+    return ' '.join(new_words)
+
+sentence = ""I love learning Python but sometimes it is hard to understand""
+new_sentence = remove_word(sentence, 'Python')
+print(new_sentence)
+",8.57,4.28
+Write a function in Python for sorting a list of objects by an attribute 'name'.,"list_of_objects = [{""name"": ""John"", ""age"": 35}, {""name"": ""Liz"", ""age"": 25}, {""name"": ""Max"", ""age"": 28}]","def sort_by_name(lst):
+    return sorted(lst, key=lambda item: item[""name""])
+
+list_of_objects = [{""name"": ""John"", ""age"": 35}, {""name"": ""Liz"", ""age"": 25}, {""name"": ""Max"", ""age"": 28}]
+sorted_list = sort_by_name(list_of_objects)
+print(sorted_list)
+",10,5
+Write a Python program to solve a quadratic equation.,"a = 1
+b = -5
+c = 6","import math
+a = 1
+b = - 5
+c = 6
+
+d = (b**2) - (4*a*c)
+ 
+# find two solutions
+sol1 = (-b-math.sqrt(d))/(2*a)
+sol2 = (-b+math.sqrt(d))/(2*a)
+ 
+print('The solution are {0} and {1}'.format(sol1,sol2))
+",9.57,4.78
+Find the most efficient Python code to print all the divisors of an input number.,input = 28,"def print_divisors(input):
+
+    for i in range(1, input + 1):
+        if input % i == 0:
+            print (i)
+
+input = 28
+
+print_divisors(input)
+",10,5
+Write a correct Python program to extract all words from a given sentence which have 4 or more characters.,"my_sentence = ""This is an example sentence""","def words_with_four_or_more_characters(my_sentence):
+    words = my_sentence.split("" "")
+    four_plus_words = []
+    for word in words:
+        if len(word) >= 4:
+            four_plus_words.append(word)
+    return four_plus_words
+
+my_sentence = ""This is an example sentence""
+result = words_with_four_or_more_characters(my_sentence)
+print(result)
+",9,4.5
+Write a function to calculate the sum of the positive numbers of a given list of numbers using lambda function.,,"def sum_positivenum(nums):
+    positive_nums = list(filter(lambda x: x > 0, nums))
+    return sum(positive_nums)
+
+nums = [1, -2, 3, -4, 5]
+result = sum_positivenum(nums)
+print(result)
+",8.33,4.16
+"Given a list of numbers, write a Python program to calculate the median.","[3, 4, 5, 9, 12, 15]","def median(nums):
+    nums.sort()
+    n = len(nums)
+    if n % 2 == 0:
+        return (nums[n//2] + nums[(n//2) - 1]) / 2
+    return nums[n//2]
+
+nums = [3, 4, 5, 9, 12, 15]
+print(median(nums))",10,5
+Create a Python program that takes two strings as input and creates a new string with the characters in the second string that are not present in the first string.,"jello','hello'","def difference(string1, string2):
+    new_string = ''
+    for char in string2:
+        if char not in string1:
+            new_string += char
+    return new_string
+
+string1 = 'jello'
+string2 = 'hello'
+print(difference(string1, string2))
+",8.78,4.39
+You are given the following string. Write a Python program to print how many times each word appears in the string.,"input_string = ""This is an exmaple of a string.""","def count_words(input_string):
+    words_count = {}
+    words = input_string.split()
+    for word in words:
+        if word in words_count:
+            words_count[word] += 1
+        else:
+            words_count[word] = 1
+    return words_count
+
+input_string = ""This is an example of a string.""
+words_count = count_words(input_string)
+print(words_count)
+",9.18,4.59
+Create a recursive function in Python to calculate the factorial of the following number:,7,"def factorial(x):
+    if x == 0:
+        return 1
+    else:
+        return x * factorial(x-1)
+
+x = 7
+
+factorial_of_x = factorial(x)
+print(""The factorial of {} is {}"".format(x, factorial_of_x))
+",10,5
+"Generate a function in Python which takes an array as an argument and returns an array of length two, with the first element being the maximum value and the second element being the minimum value of the array.","[1, 5, 7, 3, 9]","def minmax(array):
+    max_val = max(array)
+    min_val = min(array)
+    return [max_val, min_val]
+
+array = [1, 5, 7, 3, 9]
+result = minmax(array)
+print(result)
+",9.19,4.59
+Create a function in Python that takes two dates as parameters and calculates the number of days between them.,,"def date_difference(date1, date2):
+    diff = date2 - date1
+    return diff.days",10,5
+Generate a Python program using a list comprehension that takes a 2D list of integers and computes the sum of integers at each row.,"[[1, 2, 3], [4, 5, 6], [7, 8, 9]]","total_row_sum = [sum(row) for row in [[1, 2, 3], [4, 5, 6], [7, 8, 9]]]
+
+print(total_row_sum)",10,5
+Construct a python program to check if two given strings are anagrams.,"String1: army
+String2: mary","def isAnagram(str1, str2):
+    str1 = str1.lower()
+    str2 = str2.lower()
+
+    n1 = len(str1)
+    n2 = len(str2)
+    
+    if n1 != n2:
+        return False
+    
+    str1_sorted = ''.join(sorted(str1))
+    str2_sorted = ''.join(sorted(str2))
+    
+    for i in range(n1):
+        if str1_sorted[i] != str2_sorted[i]:
+            return False
+    
+    return True
+
+string1 = ""army""
+string2 = ""mary""
+result = isAnagram(string1, string2)
+print(result)
+",10,5
+Create a python program to reverse an integer.,x = 123,"def reverse_int(x):
+    reversed_int = int(str(x)[::-1])
+    return reversed_int
+
+x = 123
+reversed_int = reverse_int(x)
+print(reversed_int)
+",9.89,4.94
+"Create a Python script to generate a random password of length 8, containing a mix of upper and lower case letters, and numbers",,"import string
+import random
+
+def generate_password(length):
+    charPool = string.ascii_letters + string.digits
+    password = ''.join(random.sample(charPool, length))
+    return password
+
+password = generate_password(8)
+print(password)
+",8.75,4.37
+Develop a Python function to determine the greatest common divisor of two integers.,"a = 28 
+b = 15","def gcd(a, b): 
+    if b == 0:
+        return a
+    return gcd(b, a % b)
+
+def main():
+    a = 28 
+    b = 15 
+    print(gcd(a, b)) 
+
+if __name__ == ""__main__"": 
+    main()
+",10,5
+Develop an algorithm in Python to print an array in reverse order.,"[1, 2, 3, 4, 5]","def reverse_array(arr):
+    return arr[::-1]
+
+arr = [1, 2, 3, 4, 5]
+print(reverse_array(arr))",8.5,4.25
+Design a function to traverse a binary tree in a breadth-first manner.,,"def breadth_first_traversal(root): 
+    if root is None: 
+        return
+
+    queue = [] 
+    queue.append(root) 
+
+    while len(queue) > 0: 
+        node = queue.pop(0)
+        print(node.val, end=' ') 
+
+        if node.left is not None: 
+            queue.append(node.left) 
+
+        if node.right is not None: 
+            queue.append(node.right)
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+if __name__ == ""__main__"":
+    root = TreeNode(1)
+    root.left = TreeNode(2)
+    root.right = TreeNode(3)
+    root.left.left = TreeNode(4)
+    root.left.right = TreeNode(5)
+    
+    print(""Breadth-first traversal:"")
+    breadth_first_traversal(root)
+",9.2,4.6
+Create a Python program that will take a list of numbers and identify if any of the numbers are multiples of three.,"numbers = [2, 7, 8, 15, 24]","numbers = [2, 7, 8, 15, 24]
+
+for number in numbers:
+    if number % 3 == 0:
+        print(f'{number} is a multiple of 3')
+    else:
+        print(f'{number} is not a multiple of 3')
+",10,5
+Design a Python program for verifying the two strings are rotations of each other?,"s1 = ""Hello World""
+s2 = ""World Hello""","def check_rotation(str1, str2):
+    if len(str1) != len(str2):
+        return False
+    
+    temp = str1 + str1
+    return str2 in temp
+
+s1 = ""Hello World""
+s2 = ""World Hello""
+if check_rotation(s1, s2):
+    print('These strings are rotations of each other')
+else:
+    print('These strings are not rotations of each other')
+",9.39,4.69
+Write a python script to remove all punctuations and whitespace in a string,"string = ""Hello, how are you! I'm doing great.""","def remove_punc_and_whitespace(string):
+    punctuation = "" ,;:-!?.""
+    return ''.join([x for x in string if x not in punctuation])
+
+input_string = ""Hello, how are you! I'm doing great.""
+output_string = remove_punc_and_whitespace(input_string)
+print(output_string)
+",10,5
+Implement a function in Python that takes two integers as input and returns the larger one.,,"def larger_of_two(num1, num2):
+    if num1 > num2:
+        return num1
+    else:
+        return num2
+",8.89,4.44
+"Create a Python script that prints numbers from 1 to 10, one number per line with a delay of 1 second.",,"import time
+
+for i in range(1, 11):
+    print(i)
+    time.sleep(1)
+",10,5
+Create a program in Python that takes a list of strings and returns a new list with each string reversed.,"[""Hello"", ""World""]","def reverse_list(strings):
+    return [s[::-1] for s in strings]
+
+strings = [""Hello"", ""World""]
+print(reverse_list(strings))
+",9.09,4.54
+Write a Python program to generate a random name from a set of given names.,"['John', 'Andy', 'Alex', 'Paul', 'Pippa']","import random
+
+names = [""John"", ""Andy"", ""Alex"", ""Paul"", ""Pippa""]
+
+def getRandomName(names):
+    randomIndex = random.randint(0, len(names)-1) 
+    return names[randomIndex]
+
+if __name__ == '__main__':
+    print(getRandomName(names))
+",9.57,4.78
+Write a python function to find the index of an extra element present in one sorted array.,,"def find_Extra(arr1,arr2,n) : 
+    for i in range(0, n) : 
+        if (arr1[i] != arr2[i]) : 
+            return i 
+    return n ",10,5
+Create a program in Python to check for duplicate words in a given sentence.,,"sentence = ""I am going to the store to buy food""
+
+words = sentence.split(' ')
+
+# Table to keep track of duplicates
+table = []
+
+for word in words:
+    if word in table:
+        print(""Duplicate word found: "" + word)
+    else:
+        table.append(word)
+",10,5
+Create a Python script that converts temperatures from Celsius to Fahrenheit.,23,"def celsius_to_fahrenheit(celsius):
+    return ((celsius * 9/5 ) + 32)
+
+temperature = 23
+fahrenheit = celsius_to_fahrenheit(temperature)
+print('The temperature in Fahrenheit is: ' + str(fahrenheit))
+",9.57,4.78
+Write a function in Python which takes a list of numbers as input and outputs a list with each element multiplied by two.,"[3, 5, 8, 9]","def list_multiplication(nums):
+    output_list = []
+    for i in range(len(nums)):
+        output_list.append(nums[i] * 2)
+    return output_list
+
+nums = [3, 5, 8, 9]
+result = list_multiplication(nums)
+print(result)
+",9,4.5
+Write a python program to detect whether a given string is a palindrome or not.,,"def isPalindrome(string): 
+    left, right = 0, len(string)-1
+    while right >= left: 
+        if not string[left] == string[right]: 
+            return False
+        left += 1
+        right -= 1
+    return True",10,5
+write a python code to print the common elements in between two given sets.,"set1 = {1, 2, 3, 4, 5, 6, 7}
+set2 = {2, 4, 5, 6}","def common_elements(set1, set2): 
+    return set1 & set2
+
+print(common_elements({1,2,3,4,5,6,7}, {2,4,5,6}))",10,5
+Write a python program to find the sum of squares of all numbers in a set,"Set: {1, 2, 3}","def sum_squares(s):
+    total = 0
+    for x in s:
+        total += x * x
+    return total
+
+set1 = {1, 2, 3}
+result = sum_squares(set1)
+print(result)
+",10,5
+Write a python function to set the left most unset bit.,,"def set_left_most_unset_bit(n): 
+    if not (n & (n + 1)): 
+        return n 
+    pos, temp, count = 0, n, 0 
+    while temp: 
+        if not (temp & 1): 
+            pos = count      
+        count += 1 
+        temp>>=1
+    return (n | (1 << (pos))) 
+",9,4.5
+Create a loop in Python that prints out a list of numbers from 1 to 10 multiplied by 3.,,"for i in range(1, 11):
+    print(i * 3)",10,5
+Write a Python program to calculate the area of a triangle given three side lengths.,,"def area_of_triangle(a, b, c):
+    # calculate the semi-perimeter
+    s = (a + b + c) / 2
+    # calculate the area
+    area = (s * (s-a) * (s-b) * (s-c)) ** 0.5
+    return area",10,5
+Create a python script to concatenate two given strings.,"string1 = ""Hello ""
+string2 = ""World!""","def concatenateStrings(string1, string2):
+    return string1 + string2
+
+string1 = ""Hello ""
+string2 = ""World!""
+result = concatenateStrings(string1, string2)
+print(result)
+",8.89,4.44
+Write a function to count occurrence of a character in a string.,,"def count_char(string, char):
+    count = 0
+    for i in range(len(string)):
+        if string[i] == char:
+            count += 1
+    return count
+
+string = ""hello""
+char = ""l""
+result = count_char(string, char)
+print(f""The character '{char}' appears {result} times in '{string}'."")  # Output: The character 'l' appears 2 times in 'hello'.
+",9,4.5
+"Write a Python function to take a text string as an input, and generate a table of the frequencies of each letter in the string.","sample_string = ""HelloWorld""","def find_frequencies(sample_string):
+    frequency_table = dict()
+    for char in sample_string:
+        if char in frequency_table:
+            frequency_table[char] += 1
+        else:
+            frequency_table[char] = 1
+    return frequency_table
+
+sample_string = ""HelloWorld""
+result = find_frequencies(sample_string)
+print(result)
+",9.25,4.62
+Write a Python program using a for loop to sum up the even numbers in a given list.,"number_list = [2, 3, 5, 7, 11, 13, 17]","number_list = [2, 3, 5, 7, 11, 13, 17]
+total = 0
+
+for number in number_list:
+    if number % 2 == 0:
+        total += number
+
+print(total)
+",10,5
+Generate a Python code to search a number in a sorted array,,"def binary_search(arr, x): 
+    l = 0
+    r = len(arr)-1
+    while l <= r:
+        mid = l + (r - l) // 2
+  
+        if arr[mid] == x: 
+            return mid 
+        elif arr[mid] < x: 
+            l = mid + 1
+        else: 
+            r = mid - 1
+    return -1
+",9.09,4.54
+Write a Python script to identify the prime numbers in a list of integers.,"list of integers: [2, 4, 7, 11, 13]","def is_prime(num): 
+    if num > 1: 
+        for i in range(2, num): 
+            if (num % i) == 0: 
+                return False 
+        else: 
+            return True
+    else: 
+        return False
+
+numbers = [2, 4, 7, 11, 13]   
+for num in numbers: 
+    if is_prime(num): 
+        print(num)
+",8.18,4.09
+Write a Python program to generate a 5x5 matrix filled with zeros.,,"def generate_matrix():
+    matrix = []
+    for _ in range(5):
+        row = [0] * 5
+        matrix.append(row)
+    return matrix
+        
+if __name__ == '__main__':
+    matrix = generate_matrix()
+    print(matrix)
+",8.89,4.44
+Write a Python script to compute the area of the circle using its radius.,,"import math
+
+def compute_area_of_the_circle(radius):
+    return math.pi * (radius**2)",10,5
+Write a python program to make all the characters of a string into lowercase.,,"def convert_to_lowercase(string): 
+    lowercase_string = """" 
+    for char in string: 
+        lowercase_string += char.lower() 
+    return lowercase_string",10,5
+"Compare two strings and print true if they are equal, false otherwise in Python.",,"a = ""test""
+b = ""test""
+
+if a == b:
+  print(""true"")
+else:
+  print(""false"")",9,4.5
+Develop a Python script that prints out the numbers from 0 to 9 in descending order?,,"for n in reversed(range(0,10)):
+    print(n)
+",10,5
+Write a python function to count the occurence of all elements of list in a tuple.,,"from collections import Counter 
+def count_Occurrence(tup, lst): 
+    count = 0
+    for item in tup: 
+        if item in lst: 
+            count+= 1 
+    return count  
+",8.57,4.28
+"Write a python program to count the total number of ""1""s present in a binary string",binary_string = '10101100110',"def count_ones(binary_string):
+    count = 0
+    for bit in binary_string:
+        if bit == '1':
+            count += 1
+    return count
+
+binary_string = '10101100110'
+print(count_ones(binary_string))
+",8.75,4.37
+Design a function in Python to sort the given list of numbers in descending order.,"The given list of numbers is: [2, 4, 1, 6, 9, 8]","def descendingSort(nums):
+    # sort list in reverse order
+    nums.sort(reverse=True)
+    return nums
+
+print(descendingSort([2, 4, 1, 6, 9, 8]))
+",10,5
+Write a Python program to find the n-th smallest number in the following list,"[2, 3, 5, 7, 11] n = 2","def nth_smallest(input_list, n):
+    input_list.sort()
+    return input_list[n-1]
+
+input_list = [2, 3, 5, 7, 11]
+n = 2
+result = nth_smallest(input_list, n)
+print(result)
+",8.14,4.07
+Write a Python program to convert a given binary form to its original string.,"b_string = ""0100100001100101011011000110110001101111""","def binary_to_string(b_string):
+ s = """"
+ for i in range(0, len(b_string), 8):
+    byte = b_string[i: i + 8]
+ s += chr(int(byte, 2))
+ return s
+
+b_string = ""0100100001100101011011000110110001101111""
+print(binary_to_string(b_string))
+",9.25,4.62
+Write a Python program to count the number of digits in an integer.,number = 9923,"def count_digits(number):
+    count = 0
+    while number != 0:
+        count += 1
+        number //= 10
+    return count
+
+number = 9923
+print(count_digits(number))
+",9.09,4.54
+Implement an algorithm in Python to remove duplicate elements from a given list.,"list = [1,4,4,4,5,5,5,6,7]","def removeDuplicates(list): 
+    uniqueList = []  
+    for item in list: 
+        if item not in uniqueList: 
+            uniqueList.append(item) 
+    return uniqueList 
+
+print(removeDuplicates([1,4,4,4,5,5,5,6,7]))
+",8.57,4.28
+Create a Python program to reverse a list without using the reverse() method.,"[1, 2, 3, 4, 5]","def reverse_list(lst):
+    reversed_list = []
+    for i in range(len(lst)-1,-1, -1):
+      reversed_list.append(lst[i])
+    return reversed_list
+
+print(reverse_list([1, 2, 3, 4, 5]))
+",8.33,4.16
+Write a function to remove leading zeroes from an ip address.,,"import re
+def removezero_ip(ip):
+ string = re.sub('\.[0]*', '.', ip)
+ return string
+",10,5
+Generate a python program to classify whether a number is divisible by 5 or not.,,"def is_divisible_by_five(number):
+    if number % 5 == 0:
+        return 'Divisible'
+    else:
+        return 'Not divisible'
+",8.5,4.75
+Develop a program to print all unique strings from a given array of strings,"[""Hello"", ""World"", ""Hello"", ""Python""]","def unique_strings(strings):
+    unique_strings = []
+    for string in strings:
+        if string not in unique_strings:
+            unique_strings.append(string)
+    return unique_strings
+
+strings = [""Hello"", ""World"", ""Hello"", ""Python""]
+result = unique_strings(strings)
+print(result)
+",7.78,3.89
+Write a Python program to convert an array of objects into an array of JSON string.,,"import json
+
+def array_obj_to_json(arr):
+    json_arr = []
+    for obj in arr:
+        json_arr.append(json.dumps(obj))
+    return json_arr
+",10,5
+Write a function to find the volume of a cylinder.,,"def volume_cylinder(r,h):
+
+  volume=3.1415*r*r*h
+
+  return volume",9.09,4.54
+Generate a program in Python to find the median of a list of numbers.,"[5, 8, 2, 7, 4]","def median(nums):
+    nums.sort()
+    length = len(nums)
+ 
+    if length % 2 == 0:
+        return (nums[length//2] + nums[(length//2)-1])/2.0
+    else:
+        return nums[length//2] 
+
+list = [5, 8, 2, 7, 4]
+med = median(list)
+print('The median of the list is ' + str(med))
+",8.89,4.44
+Create a Python function that checks whether a given list contains any repeated elements.,,"def has_duplicates(arr): 
+    s = set() 
+
+    for item in arr: 
+        if item in s:
+            return True 
+        else:
+            s.add(item) 
+
+    return False
+",8.57,4.28
+Create a function in Python that takes two numbers as input and returns a dictionary with all the prime numbers between them.,8 and 20,"def prime_numbers(x, y):
+    prime_nums = {}
+
+    for i in range(x, y + 1):
+        if i > 1:
+            is_prime = True
+            for j in range(2, int(i**0.5) + 1):
+                if i % j == 0:
+                    is_prime = False
+                    break
+            if is_prime:
+                prime_nums[i] = i
+
+    return prime_nums
+
+print(prime_numbers(8, 20))
+",10,5
+Design a program to validate a user's phone number in Python.,,"import re
+
+def is_valid_phone_number(phone_number):
+ pattern = re.compile(""^[0-9]{3}-[0-9]{3}-[0-9]{4}$"")
+ match = pattern.match(phone_number)
+ return bool(match)
+",9.37,4.68
+Write a Python program that can compare two lists of integers and identify any elements that appear in both lists.,,"def find_common_elements(list1, list2):
+    common_elements = []
+
+    for e1 in list1:
+        for e2 in list2:
+            if e1 == e2:
+               common_elements.append(e1)
+
+    return common_elements
+
+list1 = [1, 2, 3, 4, 5]
+list2 = [2, 4, 6, 8]
+
+print(find_common_elements(list1, list2))
+",8,4
+"Construct a Python function to filter out all the words from a list that contains the letter ""a"".","['dog', 'cat', 'ant', 'tree', 'apple']","def filter_words_with_a(words):
+    return [word for word in words if 'a' in word]
+
+words = ['dog', 'cat', 'ant', 'tree', 'apple']
+filtered_words = filter_words_with_a(words)
+print(filtered_words)
+",9.5,4.5
+Write a Python program that will replace all the numbers greater than 5 in an array with 0.,"arr = [1, 4, 6, 7, 8, 9]","def replace_numbers(arr):
+    for i, num in enumerate(arr):
+        if num > 5:
+            arr[i] = 0
+
+arr = [1, 4, 6, 7, 8, 9]
+replace_numbers(arr)
+print(arr)
+",8.57,4.28
+Write a Python program to print even numbers from 0 to the number provided,N = 30,"def print_even_numbers(N):
+    for x in range(0, N+1, 2):
+        print(x)
+
+N = 30
+print_even_numbers(N)
+",9.89,4.94
+Develop a Python algorithm to find the maximum element in a given array.,"[1, 4, 6, 7, 3]","def find_max_element(arr):
+    maxElement = arr[0]
+    for val in arr:
+        if val > maxElement:
+            maxElement = val
+    return maxElement",8.33,4.16
+Create a boolean filter in Python which returns true if the input is a two-letter word.,,"def two_letter_filter(word):
+    if len(word) == 2:
+        return True
+    else:
+        return False
+",9,4.5
+Write a Python program to split a string on any whitespace.,"String to be split = ""Python is an interpreted language.""","def splitOnWhitespace(inputString):
+    words = inputString.split()
+    return words
+
+stringToBeSplit = ""Python is an interpreted language.""
+words = splitOnWhitespace(stringToBeSplit)
+print(words)
+",10,5
+Write a Python program to match a given pattern in a given string.,"String: ""ABCDDEFG""
+Pattern: ""AB*EFG""","import re
+
+string = ""ABCDDEFG""
+pattern = ""AB*EFG""
+match = re.search(pattern, string)
+ 
+if match:
+    print(""Pattern found!"")
+else:
+    print(""Pattern not found!"")
+",9.89,4.44
+Write a Python program to search a list of strings for a given string.,"list = [""dog"", ""cat"", ""bird""]
+target = ""bird""","list = [""dog"", ""cat"", ""bird""]
+target = ""bird""
+
+for element in list:
+    if element == target:
+        print(""Target string found: {}"".format(target))
+        break
+",8.33,4.16
+Write a function in Python to find out the longest word in a string,,"def longestWord(str):
+    words = str.split()
+    max_len = 0
+    for word in words:
+        if len(word) > max_len:
+            max_len = len(word)
+    for word in words:
+        if len(word) == max_len:
+            return word
+",7.78,3.89
+Create a function in Python that takes a list of strings and for each string appends the first letter to the end of the string.,"['cat', 'bird', 'rabbit']","def append_first_letter_end(list_of_strings):
+    new_list_of_strings = []
+    for string in list_of_strings:
+        new_string = string + string[0]
+    new_list_of_strings.append(new_string)
+    return new_list_of_strings
+",10,5
+Create a Python script that takes in a user-specified temperature in Fahrenheit and prints out the corresponding temperature in Celsius.,,"def fahrenheit_to_celsius(temp_f):
+    return (temp_f - 32) * 5 / 9
+
+temp_f = float(input('Enter temperature in Fahrenheit:'))
+temp_c = fahrenheit_to_celsius(temp_f)
+
+print(f'{temp_f}F = {temp_c}C')
+",9,4.5
+Write a function to find the third side of a right angled triangle.,,"import math
+def otherside_rightangle(w,h):
+    s=math.sqrt((w*w)+(h*h))
+    return s
+
+result = otherside_rightangle(3, 4)
+print(result)
+",10,5
+Write a Python code to convert a numeric string to number.,,"def convert_string_to_number(str):
+    try: 
+        return int(str)
+    except ValueError:
+        try:
+            return float(str)
+        except ValueError:
+            return ""String could not be converted to number.""
+
+str = input(""String: "")
+print(""Number:"", convert_string_to_number(str))",8.89,4.44
+Create a Python program that will generate a random password from the given set of characters.,,"import random
+
+def generate_random_password(characters=""abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}:""):
+    password = """"
+    for _ in range(8):
+        password += random.choice(characters)
+    return password",10,5
+Create a python program to find the longest consecutive 1s in a binary number.,10101010001,"def max_ones(num):
+    count = 0 
+    result = 0
+    for i in range(len(num)):
+        if num[i] == '1':
+            count += 1 
+            result = max(result, count)
+        else:
+            count = 0 
+    return result
+
+num = '10101010001'
+print(max_ones(num))",8.18,4.09
+Modify the Python code below to reverse the string input.,string = hello world,"string = ""hello world""  
+rev_string = """" 
+for char in string: 
+    rev_string = char + rev_string 
+ 
+print(rev_string)
+",10,5
+Write a Python program to divide a list of numbers into two equal lists.,"[1,2,3,4,5,6,7,8,9,10]","list_a = [1,2,3,4,5]
+list_b = [6,7,8,9,10]",10,5
+Construct a function in Python which takes in a string and returns the number of vowels it has.,"string=""hello world""","def countVowels(string):
+    vowels = 'aeiouAEIOU'
+    count = 0
+
+    for char in string:
+        if char in vowels:
+            count += 1
+    
+    return count
+
+string = ""hello world""
+vowel_count = countVowels(string)
+print(vowel_count)
+",8,4
+Write a python program to identify if a string s has matching parentheses,,"def matching_paren(s):
+    stack = []
+    for char in s:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if len(stack) == 0:
+                return False 
+            stack.pop()
+    
+    if len(stack) == 0:
+        return True
+    else:
+        return False
+",8.33,4.16
+Write a function to find the longest subsequence such that the difference between adjacents is one for the given array.,,"def longest_subseq_with_diff_one(arr, n): 
+    dp = [1 for i in range(n)] 
+    for i in range(n): 
+        for j in range(i): 
+            if ((arr[i] == arr[j]+1) or (arr[i] == arr[j]-1)): 
+                dp[i] = max(dp[i], dp[j]+1) 
+    result = 1
+    for i in range(n): 
+        if (result < dp[i]): 
+            result = dp[i] 
+    return result
+",8.13,4.06
+Develop a Python function that can detect loops in a given linked list.,Linked List: head -> 1 -> 2 -> 3 -> 4 -> 5,"class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+def detectLoop(head):
+    slow_p = head 
+    fast_p = head 
+    while slow_p and fast_p and fast_p.next:
+        slow_p = slow_p.next
+        fast_p = fast_p.next.next
+        if slow_p == fast_p:
+            return True
+    return False
+
+head = Node(1)
+head.next = Node(2)
+head.next.next = Node(3)
+head.next.next.next = Node(4)
+head.next.next.next.next = Node(5)
+
+print(detectLoop(head))
+
+head.next.next.next.next.next = head.next
+
+print(detectLoop(head))
+",7.78,3.89
+Implement a Python program to check if a given number is an Armstrong Number,,"def checkArmstrong(num):
+    temp = num 
+    res = 0
+    while temp > 0: 
+        digit = temp % 10
+        res = res + digit ** 3
+        temp = temp // 10
+    
+    if num == res: 
+        return f'{num} is an Armstrong Number'
+    else:
+        return f'{num} is not an Armstrong Number'
+",9,4.5
+Write a Python function that takes in two parameters of type list and returns the sum of all the elements in the two lists.,"list1 = [1, 2, 3, 4]
+list2 = [5, 6, 7, 8]","def list_sum(list1, list2):
+    total_sum = 0
+
+    for num in list1:
+        total_sum += num
+
+    for num in list2:
+        total_sum += num
+
+    return total_sum
+",10,5
+Create a function in Python to take two numerical values and return true if one is divisible by the other.,"number1 = 10
+number2 = 3","number1 = 10
+number2 = 3
+
+def isDivisible(a, b):
+    return a % b == 0
+
+print(isDivisible(number1, number2))  # False
+",10,5
+Write a function in Python that takes in a string and removes all the unnecessary whitespaces.,This     string  contains   too     much whitespace!,"def remove_whitespaces(string):
+    return ' '.join(string.split())
+ 
+print(remove_whitespaces(""This     string  contains   too     much whitespace!""))",8.33,4.16
+Design an algorithm in Python to find the number of occurrences of a given string in another string.,"haystack = ""Hello World""
+needle = ""l""","haystack = ""Hello World""
+needle = ""l""
+
+def count_occurrences(haystack, needle):
+    count = 0
+    for char in haystack:
+        if char == needle:
+            count += 1
+    return count
+
+print(count_occurrences(haystack, needle))
+",7.78,3.89
+Write a Python program that takes a user input of a number and prints out the corresponding character from the ASCII table.,76,"# Take user input for the number
+number = int(input('Enter a number: '))
+
+# chr() function to get the character
+print('The character corresponding to ASCII value', number, 'is', chr(number))
+",10,5
+Create a function in Python to compare two strings and return true if the strings only differ by one character.,"s1 = 'apple'
+s2 = 'acple'","def compare_strings(s1, s2):
+    mismatch_count = 0
+
+    for i in range(len(s1)):
+        if s1[i] != s2[i]:
+            if mismatch_count > 0:
+                return False
+
+            mismatch_count += 1
+
+    return mismatch_count == 1
+
+compare_strings('apple', 'acple')",8.89,4.44
+Create a program in Python to calculate the prime factors of a given number.,15,"def find_factors(num): 
+    """"""Function to find prime factors""""""
+    factors = [] 
+    i = 2
+    while i * i <= num: 
+        if num % i: 
+            i += 1 
+        else: 
+            num //= i 
+            factors.append(i) 
+    if num > 1: 
+        factors.append(num) 
+    return factors 
+  
+num = 15
+print(find_factors(num))
+",9.23,4.61
+"Write a Python program that takes a date in the format ""YYYY-MM-DD"" and returns a string with the day of the week for that date.",,"from datetime import datetime
+
+def day_of_week(date):
+    # convert string to date object
+    date_obj = datetime.strptime(date, ""%Y-%m-%d"")
+    # retrieve weekday
+    day = date_obj.strftime(""%A"")
+    return day",10,5
+Write a python function to check whether the given string is made up of two alternating characters or not.,,"def is_Two_Alter(s):  
+    for i in range (len( s) - 2) : 
+        if (s[i] != s[i + 2]) : 
+            return False
+    if (s[0] == s[1]): 
+        return False
+    return True",7.14,3.57
+Create a method in Python that takes a list of numbers and returns its average.,"[7, 8, 10, 4, 11]","def avg(list): 
+	sum = 0
+	for item in list:
+		sum += item 
+	return sum / len(list) 
+
+list1 = [7, 8, 10, 4, 11]
+result = avg(list1) 
+  
+print(""Average of all items: "", result)
+",7.5,3.75
+Write a Python function to find the most frequent element in a list.,,"def most_frequent(list): 
+    counter = 0
+    num = list[0] 
+
+    for i in list: 
+        curr_frequency = list.count(i) 
+        if curr_frequency > counter: 
+            counter = curr_frequency 
+            num = i 
+
+    return num
+",8.89,4.44
+Write a python function to find the average of even numbers till a given even number.,,"def average_Even(n) : 
+    if (n% 2!= 0) : 
+        return (""Invalid Input"") 
+    sm = 0
+    count = 0
+    while (n>= 2) : 
+        count = count+1
+        sm = sm+n 
+        n = n-2
+    return sm // count 
+",7.33,3.66
+Design a function in Python to remove the vowels from a given string.,"text = ""Hello World""","def remove_vowels(text):
+    vowels = [""a"", ""e"", ""i"", ""o"", ""u""]
+    result = """"
+    for char in text:
+        if char.lower() not in vowels:
+            result += char
+    return result
+
+text = ""example text""
+print(remove_vowels(text))
+",8.89,4.44
+Write a python function to count the number of words in a sentence that are longer than the given length.,"sentence = ""This is a sample sentence""
+length = 4","sentence = ""This is a sample sentence""
+length = 4
+
+def count_long_words(sentence, length):
+    words = sentence.split()
+    count = 0
+    
+    for word in words:
+        if len(word) > length:
+            count += 1
+    return count
+
+result = count_long_words(sentence, length)
+print(result)
+",8.18,4.09
+Generate a program in Python for merging two sorted lists into one.,,"def merge_sorted_lists(list1, list2):
+    merged_list = []
+    i = 0
+    j = 0
+    while i < len(list1) and j < len(list2):
+        if list1[i] < list2[j]:
+            merged_list.append(list1[i])
+            i += 1
+        else:
+            merged_list.append(list2[j])
+            j += 1
+    merged_list += list1[i:]
+    merged_list += list2[j:]
+ 
+    return merged_list",9.23,4.61
+Write a Python program for finding the root of a given quadratic equation.,"a = 1, b = 5, c = 4","def quadratic(a, b, c):
+    d = (b ** 2) - (4 * a * c)
+
+    if d < 0:
+        return None
+
+    root1 = (-b - d ** 0.5) / (2 * a)
+    root2 = (-b + d ** 0.5) / (2 * a)
+    return root1, root2
+",10,5
+"Write a Python program that will ask the user to enter a word or phrase and then print out the individual characters, sorted alphabetically.",,"word = input('Enter a word or phrase: ')
+
+characters = sorted(list(word))
+
+for character in characters:
+    print(character)
+",10,5
+Write a Python program to concatenate all the elements in a given list of strings.,"list_of_strings = [""a"", ""b"", ""c"", ""d"", ""e""]","list_of_strings = [""a"", ""b"", ""c"", ""d"", ""e""]
+
+def concatenate_strings(list_of_strings):
+    result = ''.join(list_of_strings)
+    return result
+
+result = concatenate_strings(list_of_strings)
+print(result)
+",7.67,3.83
+Write a Python program that prints the nth prime number.,n=5,"def nth_prime_number(n):
+    prime_numbers = [2]
+    number = 3
+
+    while len(prime_numbers) < n:
+        is_prime = True
+        for prime in prime_numbers:
+            if number % prime == 0:
+                is_prime = False
+                break
+        if is_prime:
+            prime_numbers.append(number)
+        number += 2
+    return prime_numbers[-1]
+
+print(nth_prime_number(5))",10,5
+Can you construct a Python program that takes a string of words and counts the occurrences of each word?,This is an example of a string of words,"words = ""This is an example of a string of words"".split()
+
+word_freq = {}
+for word in words:
+    if word not in word_freq:
+        word_freq[word] = 1
+    else:
+        word_freq[word] += 1
+
+for key, value in word_freq.items():
+    print(f""{key} : {value}"")",10,5
+Write a function to find the median of three specific numbers.,,"def median_numbers(a, b, c):
+    if a > b:
+        if a < c:
+            median = a
+        elif b > c:
+            median = b
+        else:
+            median = c
+    else:
+        if a > c:
+            median = a
+        elif b < c:
+            median = b
+        else:
+            median = c
+    return median
+",9.89,4.94
+"Write a Python function that given a list of strings and an integer n, returns the strings that have a length greater than n.","['Cat', 'Dog', 'Rabbit', 'Elephant'], n = 5","strings = ['Cat', 'Dog', 'Rabbit', 'Elephant']
+n = 5
+
+def filter_strings(strings, n):
+    return [s for s in strings if len(s) <= n]
+
+filtered_list = filter_strings(strings, n)
+print(filtered_list)
+",6.67,3.33
+"Can you provide a Python code snippet to generate a random integer between 1 and 10, inclusive?",,"import random
+
+random_int = random.randint(1, 10)
+print(random_int)",10,5
+Create a program in Python which prints out all possible combinations of a given string.,,"def generate_combinations(s):
+    result = []
+    for i in range(len(s)):
+        for j in range(i+1, len(s)+1):
+            result.append(s[i:j])
+    return result",10,5
+Write a loop in Python to traverse a given list of numbers in reverse order,"[1, 2, 3, 4, 5]","numbers = [1, 2, 3, 4, 5]
+
+for i in range(len(numbers) - 1, -1, -1):
+    print(numbers[i])
+",10,5
+Write a python function to find even numbers from a mixed list.,,"def Split(list): 
+    ev_li = [] 
+    for i in list: 
+        if (i % 2 == 0): 
+            ev_li.append(i)  
+    return ev_li
+",6.67,3.33
+Generate python code to clean up a string.,This string includes non-letter characters. This includes %$#& etc.,"def clean_string(string):
+    excluded_characters = ""*&#$@!""
+    cleaned_string = ''
+    for character in string:
+        if character not in excluded_characters:
+            cleaned_string += character
+    return cleaned_string",10,5
+Write a Python program to delete all characters in a string that matches a given pattern.,"string = ""The qick brown fox jumps over the lazy dog.""
+pattern = ""q[a-z]ck""","import re
+
+def delete_pattern_characters(string, pattern):
+    return re.sub(pattern, '', string)
+
+string = ""The quick brown fox jumps over the lazy dog.""
+pattern = r'q[a-z]ck'
+
+result = delete_pattern_characters(string, pattern)
+print(result)
+",7.14,3.58
+Write a function to find the area of a rectangle.,,"def rectangle_area(l, b):
+    area = l * b
+    return area
+",10,5
+Write a Python function that takes a list of words and removes all words that are not equal to the given word.,"word = 'Hello'
+words = ['Hi', 'there', 'Hello', 'Goodbye']","def remove_words(word, words):
+    return [w for w in words if w != word]
+
+word = 'Hello'
+words = ['Hi', 'there', 'Hello', 'Goodbye']
+
+result = remove_words(word, words)
+print(result)
+",6.67,3.33
+Write a Python program to take in a string and reverse the given string using a while loop.,,"def reverse_string(str):
+    str_rev = ''
+    i = len(str) - 1
+
+    while i >= 0:
+        str_rev += str[i]
+        i -= 1
+
+    return str_rev
+",8.57,4.28
+Write a Python function make_float that converts a given string argument to a float.,"""25.42""","def make_float(string):
+    try:
+        return float(string)
+    except ValueError:
+        return None
+
+string = ""25.42""
+result = make_float(string)
+print(result)
+",8.75,4.37
+Write a Python program to classify a given list of numbers into three groups based on their range.,"[1, 2, 5, 9, 20]","def classify_list(input_list):
+    result = {""low"": [], ""mid"": [], ""high"": []}
+    for num in input_list:
+        if num < 4:
+            result[""low""].append(num)
+        elif num < 10:
+            result[""mid""].append(num)
+        else:
+            result[""high""].append(num)
+    return result
+
+input_list = [1, 2, 5, 9, 20]
+result = classify_list(input_list)
+print(result)
+",8.33,4.16
+Create a Python script to merge all the elements in a given list of lists.,"[[1, 2, 3], [4, 5], [6]]","def merge_lists(l):
+    result = []
+    for sublist in l:
+        for item in sublist:
+            result.append(item)
+    return result
+
+print(merge_lists([[1, 2, 3], [4, 5], [6]]))",10,5
+Write a Python program to convert a given Roman number to its integer numerical equivalent.,,"def romanToInt(s):
+    values = {
+    'I': 1,
+    'V': 5,
+    'X': 10,
+    'L': 50,
+    'C': 100,
+    'D': 500,
+    'M': 1000
+    }
+
+    number = 0
+    for i in range(len(s)):
+        if i == 0 or values[s[i]] <= values[s[i-1]]:
+            number += values[s[i]]
+        else:
+            number += values[s[i]] - 2*values[s[i-1]]
+
+    return number",8.75,4.37
+Write a Python program which prints the index of the given value in a list.,"my_list = [2, 4, 6, 8]
+value = 4","def find_index(my_list, value):
+    for i in range(len(my_list)):
+        if my_list[i] == value:
+            return i
+    return -1
+
+my_list = [2, 4, 6, 8]
+value = 4
+index = find_index(my_list, value)
+print(index)
+",6.67,3.33
+Write a function to find the equilibrium index of the given array.,,"def equilibrium_index(arr):
+    total_sum = sum(arr)
+    left_sum = 0
+    for i, num in enumerate(arr):
+        total_sum -= num
+        if left_sum == total_sum:
+            return i
+        left_sum += num
+    return -1
+",10,5
+Generate a Python program to compare two given strings to check if they are identical or not.,,"def is_identical(str1, str2): 
+    if str1 == str2: 
+        return True
+    else: 
+        return False
+",7.33,3.66
+Write a function to find the perimeter of a pentagon.,,"import math
+
+def perimeter_pentagon(a):
+    perimeter = 5 * a
+    return perimeter
+
+print(perimeter_pentagon(5))
+",8.52,4.26
+"Write a function to find out, if the given number is abundant.",,"def is_abundant(n):
+    fctrsum = sum([fctr for fctr in range(1, n) if n % fctr == 0])
+    return fctrsum > n
+",6.67,3.33
+Write a Python program to identify strings with all unique characters,,"def is_unique_string(s):
+    d = {} 
+    for i in s:
+        if i in d:
+            return False
+        d[i] =1
+    return True
+print(is_unique_string(""abcde""))
+",10,5
+Develop a python function which replaces all whitespaces in a given string with a different character.,,"def replace_whitespaces(string, character):
+    return string.replace("" "", character)
+print(replace_whitespaces(""Mr John Smith"", ""%20""))
+",10,5
+Design a function in Python that takes in a string and returns a list of words from the string in reverse order.,The quick brown fox.,"def reverseString(userString):
+    wordList = userString.split("" "")
+    reversedStringList = list(reversed(wordList))
+
+    return reversedStringList
+
+print(reverseString(""The quick brown fox.""))
+",10,5
+Write a Python program to identify common characters between two given strings.,,"def common_characters(str1, str2):
+    common_chars = set(str1).intersection(set(str2))
+    return list(common_chars)",10,5
+Can you write a Python code that can sort dictionaries based on the values,,"def sort_dict_by_values(my_dict):
+    return sorted(my_dict.items(), key=lambda kv: kv[1])
+",9.09,4.54
+Write a Python program which converts feet to centimeters.,,"def convert_ft_to_cm(ft):
+    return ft * 30.48",9.39,4.69
+Write a python function to find nth bell number.,,"def bell_Number(n): 
+    bell = [[0 for i in range(n+1)] for j in range(n+1)] 
+    bell[0][0] = 1
+    for i in range(1, n+1):
+        bell[i][0] = bell[i-1][i-1]
+        for j in range(1, i+1): 
+            bell[i][j] = bell[i-1][j-1] + bell[i][j-1] 
+    return bell[n][0] 
+",8.89,4.44
+Write an algorithm to find the intersection of two sorted arrays in Python.,"a = [1, 5, 8, 9, 10], b = [2, 3, 5, 8, 9, 10]","def intersection(a, b): 
+    intersection_list = []
+    for item1 in a:
+        if item1 in b:
+            intersection_list.append(item1)
+    return intersection_list
+
+a = [1, 5, 8, 9, 10]
+b = [2, 3, 5, 8, 9, 10]
+print(intersection(a, b))
+",7.78,3.89
+Write a Python code that finds the sum of the two largest numbers in a given list.,"[1,2,3,4,5]","def find_largest_sum(list):
+    largestNum = max(list)
+    list.remove(largestNum)
+    secondLargestNum = max(list)
+    return largestNum+secondLargestNum
+
+print(find_largest_sum([1,2,3,4,5]))
+",8.33,4.16
+Write a python function to find the frequency of a number in a given array.,,"def frequency(a,x): 
+    count = 0  
+    for i in a: 
+        if i == x:
+            count += 1
+    return count 
+",9.89,4.94
+Find the 5 most frequent words in the given text.,Text: Python is a high-level programming language.,"from collections import Counter
+
+text = "" Python is a high-level programming language.""
+words = text.split()
+
+frequencies = Counter(words)
+
+frequent_words = frequencies.most_common(5)
+
+print(frequent_words)
+",10,5
+Write a Python program to find all possible subsets of a given set.,"s = {1,2,3}","import itertools
+
+def find_subsets(s):
+    subsets = []
+
+    for i in range(len(s)+1):
+        for subset in itertools.combinations(s, i):
+            subsets.append(subset)
+
+    return subsets
+
+s = {1, 2, 3}
+result = find_subsets(s)
+print(result)
+",9,4.5
+Create an algorithm in Python to rotate an array of numbers by k elements.,"Array: [1,2,3,4,5], k=2","def rotate_array(arr, k):
+    n = len(arr)
+    
+    for i in range(k):
+        temp = arr[n-1]
+        for i in range(n-1, 0, -1):
+            arr[i] = arr[i-1]
+        arr[0] = temp
+        
+    return arr
+
+print(rotate_array([1,2,3,4,5], 2))
+",9.09,4.54
+Design an algorithm in Python to replace an element in a given list of numbers at a given position with another number.,"list: [1, 2, 3, 4, 5],  element: 8,  position: 3","def replace_elem(lst, val, pos):
+    if pos < len(lst):
+        lst[pos] = val
+    return lst
+
+lst = [1, 2, 3, 4, 5]
+element = 8
+position = 3
+
+result = replace_elem(lst, element, position)
+
+print('After replacing element:', result)
+",8.89,4.44
+"Create a Python program that receives a list of numbers, and generates two new lists: one containing the even elements from the original list, and one containing the odd elements.","[1, 2, 3, 4, 5, 6]","def find_even_odd(nums):
+    even_list = []
+    odd_list = []
+    for num in nums:
+        if num % 2 == 0:
+            even_list.append(num)
+        else:
+            odd_list.append(num)
+  
+    return even_list, odd_list
+  
+print(find_even_odd([1, 2, 3, 4, 5, 6]))
+",8.33,4.16
+Create a Python method to get the index of the largest element in an array.,"[1,2,3,4,5]","def find_largest_index(arr):
+    largest = float('-inf')
+    largest_index = 0
+    for i in range(len(arr)):
+        num = arr[i]
+        if num > largest:
+            largest = num
+            largest_index = i
+    return largest_index 
+
+print(find_largest_index([1,2,3,4,5]))
+",8,4
+"Write a Python program that prints out the day number of the week (1-7) from the input date given in the format ""yyyy-mm-dd"".",,"import datetime
+
+def get_day_of_week(date):
+    year, month, day = map(int, date.split('-'))
+    day_of_week = datetime.date(year, month, day).weekday()
+    return day_of_week + 1
+
+print(get_day_of_week(""2020-05-15""))
+",10,5
+"Write a function in Python that takes an input list, multiplies each item in the list by two, and returns the resulting list.",,"def double_list(lst):
+    return [x * 2 for x in lst]",10,5
+Create a python program which reads a string from the user and prints out its length.,,"user_str = input(""Please enter a string: "")
+print(""The length of the string is"", len(user_str))",10,5
+Write a function in Python that takes two integers as arguments and returns the number of common divisors between the two.,"350, 400","def countCommonDivisors(a,b): 
+   
+    divisors = [] 
+   
+    for i in range(1, min(a,b)+1): 
+        if (a % i == 0 and b % i == 0): 
+            divisors.append(i) 
+              
+    return len(divisors) 
+
+num1 = 350
+num2 = 400
+
+print (countCommonDivisors(num1, num2)) 
+",9.17,4.58
+Create a program to print the multiplication table for a given number in Python.,,"def multiplication_table(n):
+    for i in range(1, 11):
+        print(n, 'x', i, '=', n*i)
+
+if __name__==""__main__"":
+    multiplication_table(5)
+",9.5,4.75
+Write a Python function to sort this dictionary by its keys in descending order.,"{
+    1: 'one',
+    2: 'two',
+    3: 'three',
+    4: 'four',
+    5: 'five'
+}","def sort_dictionary_keys(d):
+    return {k: d[k] for k in sorted(d.keys(), reverse=True)}
+
+d = {
+    1: 'one',
+    2: 'two',
+    3: 'three',
+    4: 'four',
+    5: 'five'
+}
+
+sorted_dict = sort_dictionary_keys(d)
+print(sorted_dict)
+",8,4
+Write a function in Python that merges two string and removes the duplicates.,"string_1 = 'one'
+string_2 = 'two'","def merge_strings(string_1, string_2):
+    s = set(string_1 + string_2)
+    merged_string = ''.join(s)
+    return merged_string
+
+string_1 = 'one'
+string_2 = 'two'
+merged_string = merge_strings(string_1, string_2)
+print(merged_string)
+",6.25,3.12
+Write a function to create a new tuple from the given string and list.,,"def new_tuple(test_list, test_str):
+    res = tuple(test_list + [test_str])
+    return res
+",9.5,4.75
+Create a Python script that simulates an 8-sided dice roll.,,"import random
+
+def roll_dice():
+    dice = random.randint(1, 8)
+    return dice
+
+dice = roll_dice()
+print(f""You rolled a {dice}"")
+",8.33,4.16
+Construct a function in Python that sorts a list of tuples by the second element of the tuple in ascending order.,"tuples = [(6, 2), (5, 4), (7, 3), (2, 8), (1, 5)]","def sort_tuples(tuples):
+    return sorted(tuples, key=lambda x: x[1])
+
+tuples = [(1, 3), (2, 1), (3, 2)]
+print(sort_tuples(tuples))
+",7.5,3.75
+"Given a string, write a python program to print the next largest palindrome.",1234,"def next_largest_palindrome(num):
+    num = int(num)
+    num += 1
+    while not is_palindrome(str(num)):
+        num += 1
+
+    return num
+
+def is_palindrome(num):
+    return num == num[::-1]
+
+print(next_largest_palindrome(""1234""))
+",10,5
+Write a method in Python to display the contents of a dictionary.,,"def display_dict(dictionary):
+    for key, value in dictionary.items():
+        print(f'{key}: {value}')
+",9.89,4.94
+Write a correct Python program to find the sum of all the digits of an integer.,,"def sum_of_digits(n):
+    s = 0
+    while n:
+        s += n % 10
+        n //= 10
+    return s
+",10,5
+Create a Python function that checks if a given string consists of all unique characters.,,"def isUnique(s):
+    chars = []
+    for char in s:
+        if char in chars:
+            return False
+        chars.append(char)
+    return True
+",9.5,4.75
+Write a function to find the item with maximum occurrences in a given list.,,"def max_occurrences(list1):
+    max_val = 0
+    result = list1[0] 
+    for i in list1:
+        occu = list1.count(i)
+        if occu > max_val:
+            max_val = occu
+            result = i 
+    return result",8.33,4.16
+Write a Python program to display the powers of 2 up to the given power.,8,"power = 8
+
+for i in range(power+1):
+    print(2**i, end=' ')
+
+print("""")
+",10,4
+Write a Python program to find the number of occurrences of a given element in an array.,"list = [1, 2, 5, 4, 1, 5]","def countOccurrences(list, element):
+    count = 0
+    for i in range(len(list)):
+        if list[i] == element:
+            count += 1
+    return count
+
+if __name__ == '__main__':
+    list = [1, 2, 5, 4, 1, 5]
+    element = 5
+    print(countOccurrences(list, element))
+",6.67,3.33
+Write a Python program to validate the given password according to the given criteria.,"The given criteria are: minimum 8 characters, should contain one uppercase letter, should contain one numeric digit","def validate_password(password):
+    if len(password) < 8:
+        return False
+    if not any(c.isupper() for c in password):
+        return False
+    if not any(c.isdigit() for c in password):
+        return False
+    return True",10,5
+Write a python function to find the minimum difference between any two elements in a given array.,,"def find_Min_Diff(arr,n): 
+    arr = sorted(arr) 
+    diff = 10**20 
+    for i in range(n-1): 
+        if arr[i+1] - arr[i] < diff: 
+            diff = arr[i+1] - arr[i]  
+    return diff ",8.87,4.43
+Write a function to calculate the nth pell number.,,"def get_pell(n):
+    if n <= 2:
+        return n
+    a = 1
+    b = 2
+    for i in range(3, n+1):
+        c = 2 * b + a
+        a = b
+        b = c
+    return b
+",9,4.5
+Write a python function to find nth number in a sequence which is not a multiple of a given number.,,"def count_no (A,N,L,R): 
+    count = 0
+    for i in range (L,R + 1): 
+        if i % A != 0: 
+            count += 1
+        if count == N: 
+            break
+    return i 
+",10,5
+Create a Python program to delete all characters at odd index in a given string.,"Hello, World!","def deleteAtOddIndex(s):
+    output = """"
+    for i in range(len(s)):
+        if i % 2 == 0:
+            output += s[i]
+    return output
+
+input_string = ""Hello, World!""
+result = deleteAtOddIndex(input_string)
+print(result)
+",8.89,4.44
+Write a python function to count equal element pairs from the given array.,,"def count_Pairs(arr,n): 
+    cnt = 0
+    for i in range(n): 
+        for j in range(i + 1,n): 
+            if arr[i] == arr[j]: 
+                cnt += 1 
+    return cnt 
+",8.89,4.44
+Write a function to check whether the given month number contains 28 days or not.,,"def check_monthnum_number(monthnum1):
+    if monthnum1 == 2:
+        return True
+    elif monthnum1 >= 1 and monthnum1 <= 12:
+        return False
+    else:
+        return None
+",8.33,4.16
+Write a function to find the maximum of nth column from the given tuple list.,,"def max_of_nth(test_list, N):
+  res = max([sub[N] for sub in test_list])
+  return (res) ",6.67,3.33
+Write a Python program that takes two sets of strings and creates a list of strings that are present in both.,,"def find_common(set_a, set_b):
+    return [item for item in set_a if item in set_b]
+",10,5
+Write a Python program that finds the average of three numbers.,"21, 15, 10","def avg(a, b, c): 
+    return (a + b + c) / 3 
+  
+a = 21
+b = 15
+c = 10
+  
+average = avg(a, b, c) 
+  
+print(""Average of three numbers is:"", average)
+",6.71,3.35
+Write a function that matches a string that has an a followed by one or more b's.,,"import re
+
+def text_match_one(text):
+    patterns = 'ab+?'
+    if re.search(patterns, text):
+        return 'Found a match!'
+    else:
+        return 'Not matched!'
+",8.33,4.16
+Develop a Python program to find the sum of first n even numbers.,7,"def find_sum(n):
+    sum = 0
+    for i in range(1, n+1):
+        if i % 2 == 0:
+            sum += i
+    return sum
+
+n = 7
+print(""The sum of the first"", n, ""even numbers is:"", find_sum(n))
+",8.75,4.37
+Write a function to zip two given lists of lists.,,"def zip_list(list1, list2):
+    result = list(map(list.__add__, list1, list2))
+    return result
+",10,5
+Create a Python function to format a string with the proper case and punctuation,"string=""hello, world""","def format_string(string):
+    formatted_string = string.capitalize()
+    
+    if not formatted_string.endswith(('.', '!', '?')):
+        formatted_string += '.'
+    
+    return formatted_string
+
+string = ""hello, world""
+formatted = format_string(string)
+print(formatted)
+",8.89,4.44
+Write a Python program that takes a list of strings as input and prints out all the strings in sorted order.,,"def sort_list_of_strings(list_of_strings):
+    list_of_strings.sort()
+    for string in list_of_strings:
+        print(string)",10,5
+Write a function to perform index wise multiplication of tuple elements in the given two tuples.,,"def index_multiplication(test_tup1, test_tup2):
+    res = tuple(tuple(a * b for a, b in zip(tup1, tup2))
+                for tup1, tup2 in zip(test_tup1, test_tup2))
+    return res
+",10,5
+Create a function in Python to print all numbers from N to 1 in reverse order.,,"def reverse_print(n):
+    for i in range(n, 0, -1):
+        print(i)
+
+n = 5
+reverse_print(n)
+",8.67,4.33
+Write a Python program that will calculate the correlation between two different datasets.,"Dataset 1:[1,2,3,4,5]
+Dataset 2:[2,4,6,8,10]","import numpy as np
+
+data1 = [1,2,3,4,5]
+data2 = [2,4,6,8,10]
+
+correlation = np.corrcoef(data1, data2)[0][1]
+print(correlation)
+",10,5
+Generate an optimized python program for splitting an array into two subarrays with equal sum.,"[1, 2, 3, 4, 5, 6]","def split_array_sum(arr):
+    sum_arr = sum(arr)
+    half_sum = sum_arr / 2
+    current_sum = 0
+    left_index = 0
+
+    for index, value in enumerate(arr):
+        current_sum += value
+        if current_sum >= half_sum:
+            left_index = index
+            break
+
+    left_arr = arr[:left_index + 1]
+    right_arr = arr[left_index + 1:]
+    return left_arr, right_arr
+
+arr = [1, 2, 3, 4, 5, 6]
+left_arr, right_arr = split_array_sum(arr)
+print(""Left array:"", left_arr)
+print(""Right array:"", right_arr)
+",8.24,4.12
+Develop a Python function that takes two strings as input and returns the longer string.,"cat', 'dog'","def longer_string(string1, string2):
+    if len(string1) > len(string2):
+        return string1
+    
+    return string2
+
+string1 = 'cat'
+string2 = 'dog'
+result = longer_string(string1, string2)
+print(f""The longer string is: {result}"")
+",7.5,3.75
+Write a Python function to calculate the sum of two numbers using recursion.,"x = 5
+y = 7","x = 5
+y = 7
+
+def recursive_sum(x, y):
+    if x == 0:
+        return y 
+    else: 
+        return recursive_sum(x - 1, y + 1) 
+
+print(recursive_sum(x, y))
+",7.33,3.16
+Create a Python dictionary from two given lists. The first list contains keys and the second list contains values.,"keys = [1, 2, 3, 4, 5]
+values = [4, 5, 6, 7, 8]","keys = [1, 2, 3, 4, 5]
+values = [4, 5, 6, 7, 8]
+
+dict_from_lists = dict(zip(keys, values))
+
+print(dict_from_lists)
+",10,5
+Write a Python program to find the shortest path between two points,"A (1,2), B (5,6)","A = (1,2) 
+B = (5,6)
+
+def short_path(p1, p2):
+    x_dist = abs(p2[0] - p1[0])
+    y_dist = abs(p2[1] - p1[1])
+    manh_dist = x_dist + y_dist
+    return manh_dist
+
+print(short_path(A, B))
+",9.27,4.63
+Generate a correct Python program to filter out elements of a list using lambda,"list = [1,2,3,4,5]","my_list = [1, 2, 3, 4, 5]
+
+result = list(filter(lambda x: x % 2 == 0, my_list))
+print(result)
+",10,5
+Write a function to check whether the given key is present in the dictionary or not.,,"def is_key_present(d, x):
+    if x in d:
+        return True
+
+    return False
+",9.09,4.54
+Write a Python program to format a specified string to limit the number of characters to 6.,"str = ""Python is a great programming language!""","str = ""Python is a great programming language!""
+new_str = ""Python"".ljust(9, '.')
+
+print(new_str)
+",8.87,4.43
+Write a Python function that takes a list of numbers and returns the sum of all odd numbers in the list.,"[1, 2, 3, 4, 5]","def sum_odd_numbers(nums):
+    result = 0
+    for num in nums:
+        if num % 2 != 0:
+            result += num
+    return result
+
+result = sum_odd_numbers([1, 2, 3, 4, 5])
+print(result)
+",9.75,4.87
+Read a given list of strings and create a new list of all strings that are longer than 5 characters long.,"['Python', 'is', 'Fun']","def filter_long_strings(string_list):
+    long_strings = []
+    for string in string_list:
+        if len(string) > 5:
+            long_strings.append(string)
+    return long_strings
+
+string_list = ['Python', 'is', 'Fun']
+
+long_strings = filter_long_strings(string_list)
+print(long_strings)
+",7.78,3.89
+Write a function to find the n'th lucas number.,,"def find_lucas(n):
+    if n == 0:
+        return 2
+    if n == 1:
+        return 1
+    return find_lucas(n - 1) + find_lucas(n - 2)
+",10,5
+Write a Python program to slice a list and store the first two elements in separate variables.,"[2, 4, 6, 8, 10]","list = [2, 4, 6, 8, 10] 
+first, second = list[0], list[1]  
+print(first) 
+print(second)",8.5,4.25
+Describe a method to find the greatest common divisor (GCD) of two numbers in Python.,,"def gcd(a, b): 
+    if a == 0 : 
+        return b  
+    if b == 0 : 
+        return a  
+  
+    if a == b: 
+        return a 
+  
+    if a > b: 
+        return gcd(a-b, b) 
+    return gcd(a, b-a) 
+   
+a = 36 
+b = 30
+  
+if gcd(a, b): 
+    print('GCD of', a, 'and', b, 'is', gcd(a, b))
+",8.57,4.28
+"Solve mathematical expression "" cos(x) + sin(x) = 0 "" using Python.",,"import numpy as np
+
+x = np.arange(-2*np.pi, 2*np.pi, 0.5)
+
+y = np.cos(x) + np.sin(x)
+
+solution = x[np.where(y == 0)]
+print(solution)",10,5
+Write a Python program to check if an array has more than three duplicate elements.,"arr = [4, 2, 8, 2, 1, 4, 19, 4]","def check_duplicate_in_array(arr):
+    result = False
+    for i in range(len(arr) - 2):
+        if arr[i] == arr[i + 1] == arr[i + 2]:
+            result = True
+            break
+    return result
+
+arr = [4, 2, 8, 2, 1, 4, 19, 4]
+print(check_duplicate_in_array(arr))
+",8.89,4.44
+Write a function in Python that takes a list of numbers and returns the sum of the list items that are greater than the given value.,"nums = [1, 4, 5, 10, 12]
+value = 6","def findSum(nums, value):
+    total = 0
+
+    for num in nums:
+        if num > value:
+            total += num
+
+    return total
+
+nums = [1, 4, 5, 10, 12]
+value = 6
+
+res = findSum(nums, value)
+
+print(res)
+",8,4
+Develop a Python program to extract the last 3 elements of a given list and append them to the beginning of the list.,,"def move_last_3(list):
+    last3 = list[-3:]
+    del list[-3:]
+    list = last3 + list
+    return list
+",9,4.5
+Write a function in Python that converts a given date-time string into a specified timestamp format.,"String date-time: ""2020-05-02 15:30:00""
+Timestamp format: %Y/%m/%d %H:%M:%S","import datetime
+
+def convert_datetime_to_timestamp(date_time, timestamp_format):
+    dt = datetime.datetime.strptime(date_time, ""%Y-%m-%d %H:%M:%S"")
+    return dt.strftime(timestamp_format)
+
+date_time = ""2020-05-02 15:30:00""
+timestamp_format = ""%Y/%m/%d %H:%M:%S""
+result = convert_datetime_to_timestamp(date_time, timestamp_format)
+print(result)
+",8.33,4.16
+"Write a function that matches a word containing 'z', not at the start or end of the word.",,"import re
+
+def text_match_wordz_middle(text):
+    patterns = r'\Bz\B'
+    if re.search(patterns, text):
+        return 'Found a match!'
+    else:
+        return 'Not matched!'
+
+print(text_match_wordz_middle(""The quick brown fox jumps over the lazy dog.""))",9.17,4.58
+Write a function to caluclate perimeter of a parallelogram.,,"def parallelogram_perimeter(b, h):
+    perimeter = 2 * (b + h)
+    return perimeter
+
+b = int(input(""Enter the base of the parallelogram: ""))
+h = int(input(""Enter the height of the parallelogram: ""))
+print(""The perimeter of the parallelogram is:"", parallelogram_perimeter(b, h))
+",9.77,4.88
+Write a Python program to join all elements in a list into a string separated by a given separator.,"[""Hello"", ""World!""], separator = "" ""","def join_list_with_separator(lst, separator):
+    joined_string = separator.join(lst)
+    return joined_string
+
+lst = [""Hello"", ""World!""]
+separator = "" ""
+result = join_list_with_separator(lst, separator)
+print(result)
+",8.14,4.07
+Create a Python script to identify the frequency of words in a sentence.,"Sentence = ""This is a test sentence""","from collections import Counter
+
+sentence = ""This is a test sentence""
+
+words = sentence.split()
+
+word_frequency = Counter(words)
+
+print(word_frequency)
+",10,5
+Develop a python program to quantify the number of appearances of each character in a given string.,,"def char_count(str1):
+    dict = {} 
+    for n in str1: 
+        keys = dict.keys() 
+        if n in keys: 
+            dict[n] += 1
+        else: 
+            dict[n] = 1 
+    return dict
+print(char_count(""google.com""))
+",8.89,4.44
+Write a Python program for checking if a number is within a given range.,,"def is_in_range(n, lower, upper):
+    return True if lower <= n & n <= upper else False
+
+is_in_range(3, 1, 10)
+",8.12,4.06
+Write a Python script to flatten a nested dictionary.,,"def flatten_dictionary(d):
+    result = {}
+
+    def traverse(k, v):
+        if isinstance(v, dict):
+            for k1, v1 in v.items():
+                traverse(k+"".""+k1, v1)
+        else:
+            result[k] = v
+
+    traverse("""", d)
+
+    return result
+",10,5
+Write a python program to calculate the median of four numbers,"3, 5, 10, 2","def calculate_median(nums):
+    nums.sort()
+    if len(nums) % 2 == 0:
+        mid1 = len(nums) // 2
+        mid2 = mid1 - 1
+        return (nums[mid1] + nums[mid2]) / 2
+    
+    return nums[len(nums) // 2]
+
+nums = [3, 5, 10, 2]
+print(calculate_median(nums))
+",8.89,4.44
+Write a Python program to create a list of all the even numbers between two given numbers.,"5, 10","def even_number_list(a, b):
+    return [i for i in range(a, b+1) if i % 2 == 0]
+
+a = 5
+b = 10
+result = even_number_list(a, b)
+print(result)
+",9.5,4.75
+Write a python function to find the maximum occurring character in a given string.,,"def get_max_occuring_char(str1):
+    ASCII_SIZE = 256
+    ctr = [0] * ASCII_SIZE
+    max = -1
+    ch = ''
+    for i in str1:
+        ctr[ord(i)] += 1
+    for i in str1:
+        if max < ctr[ord(i)]:
+            max = ctr[ord(i)]
+            ch = i
+    return ch
+
+print(get_max_occuring_char(""google.com""))
+",9.23,4.61
+Design an algorithm in Python that takes a string as input and returns a compressed version of the string.,aaabbccccca,"def stringCompress(s):
+    result = """"
+    counter = 1
+    for i in range(len(s)-1):
+        if s[i] == s[i+1]:
+            counter+=1
+        else:
+            result += s[i] + str(counter)
+            counter = 1
+        
+    result += s[i] + str(counter)
+    return result
+
+print(stringCompress('aaabbccccca'))
+",10,5
+Write a Python code that replaces every occurrence of an alphabet in a sentence with the next alphabet in the alphabetical order.,"Hello, World!","def alphabet_order(sentence):
+    output = """"
+    for character in sentence:
+        if character.isalpha():
+            ascii_value = ord(character)
+            ascii_value += 1
+            output += chr(ascii_value)
+        else:
+            output += character
+    return output
+
+print(alphabet_order(""Hello, World!""))
+",10,5
+Create a program that will generate random sequence of words.,,"import random
+
+def generate_random_words(n):
+    words = [""hello"", ""world"", ""foobar"", ""python"", ""code""]
+    output = """"
+
+    for _ in range(n):
+        output += random.choice(words)
+        output += "" ""
+
+    return output[:-1]
+",9.89,4.44
+Write a function to find the nth octagonal number.,,"def is_octagonal(n): 
+    return 3 * n * n - 2 * n
+print(is_octagonal(2)) 
+",10,5
+Design a function to calculate the volume of a cube in Python.,,"def cube_volume(side_length):
+    volume = side_length ** 3
+    return volume
+
+print(cube_volume(2))
+",10,5
+Write a python function to find minimum adjacent swaps required to sort binary array.,,"def find_Min_Swaps(arr,n) : 
+    noOfZeroes = [0] * n 
+    count = 0 
+    noOfZeroes[n - 1] = 1 - arr[n - 1] 
+    for i in range(n-2,-1,-1) : 
+        noOfZeroes[i] = noOfZeroes[i + 1] 
+        if arr[i] == 0 : 
+            noOfZeroes[i] = noOfZeroes[i] + 1
+    for i in range(0,n) : 
+        if arr[i] == 1 : 
+            count = count + noOfZeroes[i] 
+    return count
+arr = [0, 0, 1, 0, 1, 1, 0, 0, 1]
+print(find_Min_Swaps(arr,len(arr)))
+",9.29,4.64
+Generate a Python program to reverse the digits of a given number.,9786,"def reverse_number(num):
+    rev = 0
+    while num > 0:
+        reminder = num%10
+        rev = (rev*10)+reminder
+        num = num//10
+    return rev
+print(reverse_number(12345))
+",10,5
+Develop a function in Python to sort a given array of strings.,,"def sort_strings(strings):
+    return sorted(strings)
+print(sort_strings(['H', 'E', 'M', 'I', 'T']))
+",10,5
+Write a Python function to convert all strings in a list to lower case.,"list = ['Hello', 'FRIENDS', 'WorLd']","list = ['Hello', 'FRIENDS', 'WorLd']
+
+def to_lower(arr): 
+    return [item.lower() for item in arr] 
+
+result = to_lower(list) 
+print(result) 
+",9,4.5
+"Given a list, convert it to a dictionary using Python.","list_1 = [1, 2, 3, 4]","list_1 = [1, 2, 3, 4, 5]
+list_1_dict = dict() 
+for i in range(len(list_1)): 
+    list_1_dict[i] = list_1[i] 
+print(list_1_dict)
+",8,4
+Write a function to find the nth decagonal number.,,"def is_num_decagonal(n): 
+    return 4 * n * n - 3 * n 
+print(is_num_decagonal(1))
+",10,5
+Write a Python script to delete all duplicate characters in a given string,"string = ""mississippi""","string = ""mississippi""
+
+def deleteDuplicates(string):
+    result = """"
+    for i in string:
+        if i not in result:
+            result += i
+    return result
+
+print(""The output string is:"", deleteDuplicates(string))
+",8.75,4.37
+Generate a Python function that takes in a list of words and returns the length of the longest word.,"['Ram', 'Shyam', 'Mohan']","def longest_word_length(words):
+    length = 0
+    for word in words:
+        if len(word) > length:
+            length = len(word)
+            
+    return length
+
+words = ['Ram', 'Shyam', 'Mohan']
+print(longest_word_length(words))
+",7.5,3.75
+Write a Python program to simulate rolling two dice and determine the odd/even result.,,"import random
+
+def roll_dice():
+    roll1 = random.randint(1, 6)
+    roll2 = random.randint(1, 6)
+    roll_sum = roll1 + roll2
+    print(f""You rolled {roll1} and {roll2}. The total is {roll_sum}, which is {'even' if roll_sum % 2 == 0 else 'odd'}."")
+    
+roll_dice()
+",9.75,4.87
+Write a python function to count the total unset bits from 1 to n.,,"cdef count_Unset_Bits(n) :  
+    cnt = 0  
+    for i in range(1,n + 1) : 
+        temp = i  
+        while temp :  
+            if temp % 2 == 0 : 
+                cnt += 1  
+            temp = temp // 2  
+    return cnt  
+",10,5
+Write a Python code to display the area and volume of a cube with a given edge length.,3,"def cube_info(edge_length):
+    area = 6 * edge_length**2
+    volume = edge_length**3
+    return area,volume
+
+edge_length = 3
+area, volume = cube_info(edge_length)
+print(""Area of the Cube:"", area)
+print(""Volume of the Cube:"", volume)",9.23,4.61
+Write a Python program which takes the length and width of a rectangle as input and returns its perimeter.,"length = 10, width = 5","def get_perimeter(length, width):
+    return 2 * (length + width)
+
+perimeter = get_perimeter(10, 5)
+print(perimeter)
+",10,5
+Generate a valid python program to convert a given string to its title case.,hello world,"def to_title_case(string):
+    words = string.split()
+
+    result = []
+    for word in words:
+        result.append(word.title())
+
+    return ' '.join(result)
+
+title = to_title_case(""hello world"")
+print(title)
+",10,5
+Write a python function to find the first repeated character in a given string.,,"def first_Repeated_Char(str): 
+    h = {}
+    for ch in str:
+        if ch in h: 
+            return ch
+        else: 
+            h[ch] = 0
+    return '\0'
+",8.14,4.07
+"Create a Python program to remove all the elements in a given array, which are divisible by a certain number.","[23, 45, 12, 35, 29], 3","arr = [23, 45, 12, 35, 29] 
+ 
+num = 3
+ 
+new_arr = [x for x in arr if x % num != 0] 
+ 
+print(new_arr)
+",10,5
+Write a function to move all the numbers in it to the given string.,,"def move_num(test_str):
+    res = ''
+    dig = ''
+    for ele in test_str:
+        if ele.isdigit():
+            dig += ele
+        else:
+            res += ele
+    res += dig
+    return res
+",10,5
+Write a python function to count numeric values in a given string.,,"def number_ctr(str):
+    number_ctr = 0
+    for i in range(len(str)):
+        if str[i] >= '0' and str[i] <= '9':
+            number_ctr += 1
+    return number_ctr
+
+print(number_ctr(""Python 3.2""))
+",7.39,3.69
+Write a function to divide two lists using map and lambda function.,,"def div_list(nums1, nums2):
+    result = map(lambda x, y: x / y, nums1, nums2)
+    return list(result)
+",10,5
+Write a function to find the demlo number for the given number.,,"def find_demlo(s): 
+    l = len(s) 
+    res = """" 
+    for i in range(1, l+1): 
+        res = res + str(i) 
+    for i in range(l-1, 0, -1): 
+        res = res + str(i) 
+    return res 
+",10,5
+Write a Python program to detect the largest word in a sentence. The program should take a string as input and return the largest word found in it.,This sentence has seven words.,"def find_largest_word(sentence):
+    splits = sentence.split(' ')
+    largest_word = """"
+    for word in splits:
+        if len(word) > len(largest_word):
+            largest_word = word
+    return largest_word
+
+print(find_largest_word(""This sentence has seven words.""))
+",10,5
+Write a function to sum elements in two lists.,,"def sum_list(lst1, lst2):
+    res_list = [lst1[i] + lst2[i] for i in range(len(lst1))] 
+    return res_list
+
+print(sum_list([1, 0, 1], [2, 3, 4]))
+",9.89,4.44
+Create a Python script to sort a list of tuples by the second element in the tuple in ascending order.,"myList = [('Tom',7),('Harry',5),('Bob',8)]","def sortList(myList):
+    myList.sort(key=lambda x: x[1])
+
+    print(""The sorted list in ascending order is:"")
+    for i in range(len(myList)):
+        print(myList[i])
+
+myList = [('Tom', 7), ('Harry', 5), ('Bob', 8)]
+sortList(myList)
+",7.48,3.74
+Write a function to check if the two given strings are permutations of each other.,,"def check_permutation(str1, str2):
+    n1 = len(str1)
+    n2 = len(str2)
+    if n1 != n2:
+        return False
+    a = sorted(str1)
+    str1 = "" "".join(a)
+    b = sorted(str2)
+    str2 = "" "".join(b)
+    for i in range(0, n1, 1):
+        if str1[i] != str2[i]:
+            return False
+    return True
+
+print(check_permutation(""abc"", ""cab""))
+",10,5
+Generate a program in Python to output the top 3 numbers from an array of integers,"[7, 13, 5, 8, 50, 11, 64, 48]","def top_three(numbers):
+    sorted_numbers = sorted(numbers, reverse=True)
+    return sorted_numbers[:3]
+
+print(top_three([7, 13, 5, 8, 50, 11, 64, 48]))
+",10,5
+Generate a python code to rotate an array by k steps.,"[1,2,3,4,5]","def leftRotate(arr, k):
+    n = len(arr)
+    k = k % n
+    new_arr = arr[k:] + arr[:k]
+    return new_arr
+
+arr = [1, 2, 3, 4, 5]
+k = 2
+rotated_arr = leftRotate(arr, k)
+print(rotated_arr)
+",7.78,3.89
+Create a short Python program that prints out the current date and time in the specified format.,"Format - ""YYYY-MM-DD HH:MM:SS""","import time
+
+time_now = time.strftime(""%Y-%m-%d %H:%M:%S"")
+print(time_now)
+",10,5

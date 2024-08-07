@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Ensure elements stack vertically */
+}
+
+h1 {
+    color: #5A67D8;
+    text-align: center;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 400px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: block;
+}
+
+button {
+    padding: 10px 15px;
+    background: #5A67D8;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #4C51BF;
+}
+
+a {
+    color: #5A67D8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.result{
+	color: #5A67D8;
+    text-decoration: none;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+/* Ensure containers are stacked in the correct order */
+.container1 {
+    order: 1;
+}
+
+.container2 {
+    order: 2;
+}
+
+.container3 {
+    order: 3;
+}

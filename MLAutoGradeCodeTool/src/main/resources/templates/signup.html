@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ML Autograder - Sign Up</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/css/images/coding.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex; /* Use flexbox for centering body content */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center;
+            justify-content: center; /* Center items vertically within the container */
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+            box-sizing: border-box; /* Include padding in width calculations */
+        }
+
+        .container1 {
+            margin-bottom: 40px; /* Space between title and signup box */
+            text-align: center; /* Center text horizontally */
+        }
+
+        .container1 h1 {
+            font-family: 'Bold', Arial, sans-serif; /* Use a stylish font */
+            color: black; /* Color for the title text */
+            font-size: 80px; /* Larger font size */
+            margin: 0;
+            display: inline-block; /* Only as wide as the content */
+        }
+
+        .container2 {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            max-width: 490px;
+            width: 100%; /* Ensure full width within the container */
+            box-sizing: border-box; /* Include padding in width calculations */
+        }
+        .signup-header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .container3 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container3 p,
+        .container3 a {
+            color: black;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+        }
+        .container2 label,
+        .container2 input {
+            display: block;
+            width: 95%;
+            margin-bottom: 10px;
+        }
+        .container2 button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .container2 button:hover {
+            background-color: #45a049;
+        }
+        .container3 a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container1">
+            <h1>𝓐𝓾𝓽𝓸𝓰𝓻𝓪𝓭𝓮𝓻</h1>
+        </div>
+
+        <div class="container2">
+            <div class="signup-header">Sign Up</div>
+            <form th:action="@{/signup}" th:object="${user}" method="post">
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" th:field="*{username}" required/>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" th:field="*{password}" required/>
+                </div>
+                <div>
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+            <div class="container3">
+                <p th:if="${error}" th:text="${error}" class="error"></p>
+                <a href="/login">Already have an account? Log in here</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
